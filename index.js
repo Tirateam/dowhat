@@ -9,18 +9,23 @@ function handle(err, stdout, stderr) {
 
 let lets = []
 fs.readFile(process.cwd() + '/do.what', (err, content) => {
-    if(!content) throw new Error('File must contain something')
     content = content.toString()
+    if(!content) throw new Error('File must contain something')
 
     content.split('\n').filter(line => line.trim() != "" && !line.startsWith("#")).forEach(l => {
         lets.forEach(variable => {
             l = l.replaceAll(`@${variable.name}@`, variable.equals)
         })
 
+
         if(l.startsWith("@")) {
-            let varu = l.split("=")[0].substring(1)
-            if(varu.endsWith(" ")) varu = varu.substring(0, varu.length - 1)
-            return lets.push({name:varu, equals: l.split("=")[1]})
+            let varu = l.split("=")[0].substring(1).trim()
+            let alreadythere = lets.find(l => l.name == varu)
+            let equals = l.split("=")[1].trim()
+            if(alreadythere) {
+                return alreadythere.equals = equals
+            }
+            return lets.push({name:varu, equals:equals})
         } else if(l.startsWith("[")&& l.includes("if") && l.includes("]")) {
             let splitter = l.split("]")
             let expression = splitter[0].substring(1)
