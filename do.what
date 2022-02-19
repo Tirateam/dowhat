@@ -1,0 +1,6 @@
+echo "Hello"
+
+# Any comment
+
+{something} echo "something"
+{anything} echo "anything"
