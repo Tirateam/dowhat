@@ -31,3 +31,15 @@ dowhat arg
 ```sh
 echo "something"
 ```
+
+<h3 allign="center">Also there are variables, to create them start a new empty line and enter something like:</h3>
+
+```sh
+@variablename = "content"
+```
+
+<h3 allign="center">And to use them</h3>
+
+```sh
+echo "@variablename@"
+```
