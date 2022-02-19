@@ -3,7 +3,7 @@
 ***
 
 <h1 align="center">What is dowhat</h1>
-<h3 align="center"> dowhat is a command executable to do some tasks, almost the same like make, but it reads a do.what file </h3>
+<h3 align="center"> dowhat is a command executable to do some tasks, almost the same like make, but it reads a do.what file in directory where dowhat was launched</h3>
 
 ***
 
