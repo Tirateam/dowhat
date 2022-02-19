@@ -43,3 +43,8 @@ echo "something"
 ```sh
 echo "@variablename@"
 ```
+<h3 allign="center">Expression can be done like this</h3>
+```sh
+[if (@variablename@ == "content")] echo "yep, its equal to content"
+[if (@variablename@ == "ba")] echo "yep, its equal to ba"
+```
