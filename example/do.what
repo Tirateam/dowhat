@@ -1,0 +1,20 @@
+echo "Hello"
+
+# Any comment
+
+@variablename = "ba"
+
+[if (@variablename@ == "ab")] echo "yep, its ab1"
+[if (@variablename@ == "ba")] echo "yep, its ba1"
+
+@variablename = "ab"
+
+[if (@variablename@ == "ab")] echo "yep, its ab2"
+[if (@variablename@ == "ba")] echo "yep, its ba2"
+
+echo "@variablename"
+
+# I like potatoes
+
+{something} echo "something"
+{anything} echo "anything"
