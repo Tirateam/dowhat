@@ -22,9 +22,7 @@ fs.readFile(process.cwd() + '/do.what', (err, content) => {
             let varu = l.split("=")[0].substring(1).trim()
             let alreadythere = lets.find(l => l.name == varu)
             let equals = l.split("=")[1].trim()
-            if(alreadythere) {
-                return alreadythere.equals = equals
-            }
+            if(alreadythere) return alreadythere.equals = eval(equals)
             return lets.push({name:varu, equals:eval(equals)})
         } else if(l.startsWith("[")&& l.includes("if") && l.includes("]")) {
             let splitter = l.split("]")
