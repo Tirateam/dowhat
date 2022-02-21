@@ -25,7 +25,7 @@ fs.readFile(process.cwd() + '/do.what', (err, content) => {
             if(alreadythere) {
                 return alreadythere.equals = equals
             }
-            return lets.push({name:varu, equals:equals})
+            return lets.push({name:varu, equals:eval(equals)})
         } else if(l.startsWith("[")&& l.includes("if") && l.includes("]")) {
             let splitter = l.split("]")
             let expression = splitter[0].substring(1)
